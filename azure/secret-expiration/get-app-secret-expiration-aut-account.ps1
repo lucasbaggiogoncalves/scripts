@@ -161,8 +161,8 @@ $FinalHTML = $Title + $Header + $AZSPHTML
 
 # Export HTML Report to a storage account container
 
-$storageAccName = "autstorageaccountrdn"
-$storageAccKey = "fdNFPUeEnI1e9exXvsg4bBx/FTjFbLZJQVMkSUN7vY/2tnXqg8jIhWFWU4majZKtJ6Md+c/UjZMD+AStnrJiLg=="
+$storageAccName = "storageacc"
+$storageAccKey = "storagesecret"
 
 $context = New-AzStorageContext -StorageAccountName $storageAccName -StorageAccountKey $storageAccKey
 
