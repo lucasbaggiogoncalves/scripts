@@ -1,11 +1,7 @@
 #AzureAuth
-
 try {                
-    # Ensures you do not inherit an AzContext in your runbook
     Disable-AzContextAutosave -Scope Process
-    # Connect to Azure with system-assigned managed identity
     $AzureContext = (Connect-AzAccount -Identity).context
-    # set and store context
     $AzureContext = Set-AzContext -SubscriptionName $AzureContext.Subscription -DefaultProfile $AzureContext
     Write-Output "Authentication succeded."
 }
@@ -157,7 +153,6 @@ TD {border-width: 1px; padding: 3px; border-style: solid; border-color: black; p
 $FinalHTML = $Title + $Header + $AZSPHTML
 
 # Export HTML Report to a storage account container
-
 $storageAccName = "storageacc"
 $storageAccKey = "storagesecret"
 $containerName = "containername"

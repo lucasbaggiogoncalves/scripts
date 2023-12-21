@@ -10,7 +10,7 @@ foreach ($subscription in $subscriptions){
     foreach ($resourcegroup in $resourcegroups){
         if ($resourcegroup.Tags) {
             $resourcegrouptags = $resourcegroup.Tags
-            $resourcegrouptagrateio = $resourcegrouptags['Rateio']
+            $resourcegrouptagrateio = $resourcegrouptags['tag']
         }
         else {
             $resourcegrouptagrateio = $null
@@ -20,7 +20,7 @@ foreach ($subscription in $subscriptions){
         foreach ($resource in $resources) {
             if ($resource.Tags) {
                 $resourcetags = $resource.Tags
-                $resourcetagrateio = $resourcetags['Rateio']
+                $resourcetagrateio = $resourcetags['tag']
             }
             else {
                 $resourcetagrateio = $null

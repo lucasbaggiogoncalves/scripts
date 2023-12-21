@@ -1,6 +1,3 @@
-Find-Module -Name PowerShellGet | Install-Module
-Find-Module -Name ImportExcel | Install-Module
-
 $subscriptions = Get-AzSubscription
 
 $results = @()
@@ -22,4 +19,4 @@ foreach ($subscription in $subscriptions) {
     }
 }
 
-$results | Export-Excel -Path '.\resource-groups.xlsx'
+$results | Export-Csv -Path '.\resource-groups.csv'
