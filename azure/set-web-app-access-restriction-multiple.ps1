@@ -28,6 +28,7 @@ foreach ($webAppName in $webAppNames) {
                                           -Priority $initialPriority `
                                           -Action Allow `
                                           -IpAddress $value
+                                        #   -SlotName "QAS"
                                           
         Write-Output "Rule for the range $value created for web app $webAppName" 
 
