@@ -13,7 +13,7 @@ foreach ($subscription in $subscriptions) {
         $sslbinding = Get-AzWebAppSSLBinding -ResourceGroupName $webApp.ResourceGroup -WebAppName $webapp.Name
         
         $certificates += [PSCustomObject]@{
-            SubscriptionId = $subscription.Id
+            SubscriptionName = $subscription.Name
             ResourceGroup = $webApp.ResourceGroup
             WebApp = $webApp.Name
             SslBindingName = $sslbinding.Name -join ","
